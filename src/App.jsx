@@ -23,7 +23,7 @@ export default function App() {
 
           {/* NEW SYSTEM */}
           <Route path="/campuses" element={<Campuses />} />
-          <Route path="/campus/:id" element={<CampusPage />} />
+          <Route path="/campus" element={<CampusPage />} />
 
           <Route path="/classes" element={<Classes />} />
           <Route path="/contact" element={<Contact />} />
