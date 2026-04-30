@@ -1,12 +1,12 @@
-import CampusCards from "./components/CampusCards";
+// import CampusCards from "./components/CampusCards";
 
-export default function Campuses() {
-  return (
-    <div>
-      <CampusCards />
-    </div>
-  );
-}
+// export default function Campuses() {
+//   return (
+//     <div>
+//       <CampusCards />
+//     </div>
+//   );
+// }
 
 
 
