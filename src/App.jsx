@@ -17,11 +17,17 @@ export default function App() {
       <div className="pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+<Route path="/campuses" element={<Campuses />} />
+<Route path="/contact" element={<Contact />} />
+<Route path="/classes" element={<Classes />} />
+<Route path="/admission" element={<Admission />} />
+          {/* <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/campus/:id" element={<Campuses/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/classes" element={<Classes/>} />
-          <Route path="/admission" element={<Admission/>} />
+          <Route path="/admission" element={<Admission/>} /> */}
         </Routes>
       </div>
       <Footer/>
