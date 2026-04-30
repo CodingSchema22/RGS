@@ -29,12 +29,12 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
-          <p className="text-gray-400 text-sm">
+          {/* <p className="text-gray-400 text-sm">
             📍 Lahore, Pakistan
           </p>
           <p className="text-gray-400 text-sm mt-2">
             📞 +92 300 0000000
-          </p>
+          </p> */}
           <p className="text-gray-400 text-sm mt-2">
             ✉ info@rgs.edu.pk
           </p>
