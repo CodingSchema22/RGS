@@ -21,7 +21,7 @@ export default function CampusCards() {
       <div className="grid md:grid-cols-3 gap-8 relative z-10">
         
        {campuses.map((campus, index) => (
-         <Link key={campus.id} to={`/campus/${campus.id}`}>
+        <Link key={campus.id} to={`/campus/${campus.id}`}>
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
