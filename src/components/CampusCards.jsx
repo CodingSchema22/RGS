@@ -1,30 +1,30 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import campuses from "../data/campuses";
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+// import campuses from "../data/campuses";
 
-export default function CampusCards() {
-  return (
-    <div className="grid md:grid-cols-3 gap-8 p-10">
-      {campuses.map((campus, index) => (
-        <Link key={campus.id} to={`/campus/${campus.id}`}>
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition cursor-pointer"
-          >
-            <h2 className="text-xl font-bold">{campus.name}</h2>
-            <p className="text-gray-500">{campus.location}</p>
+// export default function CampusCards() {
+//   return (
+//     <div className="grid md:grid-cols-3 gap-8 p-10">
+//       {campuses.map((campus, index) => (
+//         <Link key={campus.id} to={`/campus/${campus.id}`}>
+//           <motion.div
+//             initial={{ opacity: 0, y: 40 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ delay: index * 0.1 }}
+//             className="p-6 bg-white rounded-xl shadow hover:shadow-xl transition cursor-pointer"
+//           >
+//             <h2 className="text-xl font-bold">{campus.name}</h2>
+//             <p className="text-gray-500">{campus.location}</p>
 
-            <p className="mt-3 text-sm text-gray-600">
-              Students: {campus.students}+
-            </p>
-          </motion.div>
-        </Link>
-      ))}
-    </div>
-  );
-}
+//             <p className="mt-3 text-sm text-gray-600">
+//               Students: {campus.students}+
+//             </p>
+//           </motion.div>
+//         </Link>
+//       ))}
+//     </div>
+//   );
+// }
 
 
 
