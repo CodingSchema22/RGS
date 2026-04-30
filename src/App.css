@@ -1,0 +1,6 @@
+@import "tailwindcss";
+colors: {
+  primary: "#b30000", // deep red
+  secondary: "#ffffff",
+  accent: "#ff4d4d"
+}
