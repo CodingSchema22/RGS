@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-// import Campuses from "./pages/Campuses";
-// import CampusPage from "./pages/CampusPage";
+import Campuses from "./pages/Campuses";
+import CampusPage from "./pages/CampusPage";
 import Classes from "./pages/Classes";
 import Contact from "./pages/Contact";
 import Admission from "./pages/Admission";
@@ -22,8 +22,9 @@ export default function App() {
           <Route path="/about" element={<About />} />
 
           {/* NEW SYSTEM */}
-          {/* <Route path="/campuses" element={<Campuses />} />
-<Route path="/campus/:id" element={<CampusPage />} /> */}
+
+          <Route path="/campuses" element={<Campuses />} />
+<Route path="/campus/:id" element={<CampusPage />} />
 
           <Route path="/classes" element={<Classes />} />
           <Route path="/contact" element={<Contact />} />
