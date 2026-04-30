@@ -1,10 +1,44 @@
-import CampusCards from "../components/CampusCards";
-import Navbar from "../components/Navbar";
+import CampusCards from "./components/CampusCards";
+
 export default function Campuses() {
   return (
     <div>
-      <Navbar/>
       <CampusCards />
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import CampusCards from "../components/CampusCards";
+// import Navbar from "../components/Navbar";
+// export default function Campuses() {
+//   return (
+//     <div>
+//       <Navbar/>
+//       <CampusCards />
+//     </div>
+//   );
+// }
