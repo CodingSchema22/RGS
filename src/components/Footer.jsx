@@ -1,49 +1,75 @@
+import { FaFacebookF, FaInstagram, FaYoutube, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-black to-gray-900 text-white mt-20">
-      
-      <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
-        
-        {/* Logo / About */}
-        {/* <div>
-          <h2 className="text-2xl font-bold text-red-500">RGS School</h2>
-          <p className="text-gray-400 mt-3 text-sm leading-6">
-            Providing quality education from Nursery to Matric with modern
-            learning systems, experienced teachers, and a strong academic
-            foundation.
+    <footer className="bg-gray-900 text-white pt-16 pb-8 px-6">
+      <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-4">
+
+        {/* School Info */}
+        <div>
+          <h2 className="text-2xl font-bold text-red-500">
+            Rakan Grammar School
+          </h2>
+          <p className="mt-4 text-gray-300 text-sm leading-relaxed">
+            Providing quality education from Nursery to Matric with a focus on
+            discipline, academic excellence, and modern learning.
           </p>
-        </div> */}
+        </div>
 
         {/* Quick Links */}
-        {/* <div>
+        <div>
           <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li className="hover:text-white transition cursor-pointer">Home</li>
-            <li className="hover:text-white transition cursor-pointer">About</li>
-            <li className="hover:text-white transition cursor-pointer">Campuses</li>
-            <li className="hover:text-white transition cursor-pointer">Admission</li>
-            <li className="hover:text-white transition cursor-pointer">Contact</li>
+          <ul className="space-y-2 text-gray-300 text-sm">
+            <li className="hover:text-white cursor-pointer">Home</li>
+            <li className="hover:text-white cursor-pointer">About Us</li>
+            <li className="hover:text-white cursor-pointer">Admissions</li>
+            <li className="hover:text-white cursor-pointer">Facilities</li>
+            <li className="hover:text-white cursor-pointer">Contact</li>
           </ul>
-        </div> */}
+        </div>
 
-        {/* Contact */}
+        {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
-          {/* <p className="text-gray-400 text-sm">
-            📍 Lahore, Pakistan
-          </p>
-          <p className="text-gray-400 text-sm mt-2">
-            📞 +92 300 0000000
-          </p> */}
-          <p className="text-gray-400 text-sm mt-2">
-            ✉ info@rgs.edu.pk
+
+          <div className="space-y-3 text-gray-300 text-sm">
+            <p className="flex items-center gap-2">
+              <FaMapMarkerAlt /> Shahodi Garhi, Punjab
+            </p>
+            <p className="flex items-center gap-2">
+              <FaPhone /> +92 300 0000000
+            </p>
+            <p className="flex items-center gap-2">
+              <FaEnvelope /> info@rgs.edu.pk
+            </p>
+          </div>
+        </div>
+
+        {/* Social */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+
+          <div className="flex gap-3">
+            <div className="p-2 bg-gray-800 rounded-full hover:bg-red-600 cursor-pointer transition">
+              <FaFacebookF />
+            </div>
+            <div className="p-2 bg-gray-800 rounded-full hover:bg-red-600 cursor-pointer transition">
+              <FaInstagram />
+            </div>
+            <div className="p-2 bg-gray-800 rounded-full hover:bg-red-600 cursor-pointer transition">
+              <FaYoutube />
+            </div>
+          </div>
+
+          <p className="mt-4 text-gray-400 text-sm">
+            Stay connected for updates, events & announcements.
           </p>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800 py-4 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} RGS School. All Rights Reserved.
+      <div className="mt-12 border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
+        © {new Date().getFullYear()} Rakan Grammar School. All rights reserved.
       </div>
     </footer>
   );
