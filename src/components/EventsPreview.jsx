@@ -29,7 +29,10 @@ export default function EventsPreview() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-white">
+  <section className="relative py-20 px-6 bg-gradient-to-br from-red-50 via-white to-red-100 overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 w-[500px] h-[500px] bg-red-300 opacity-20 blur-3xl rounded-full -translate-x-1/2"></div>
       
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-14">
@@ -42,16 +45,27 @@ export default function EventsPreview() {
       </div>
 
       {/* Cards */}
-      <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-2 gap-15">
 
         {events.map((item, index) => (
-          <motion.div
-            key={index}
-            className="bg-gray-50 border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
+        <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.12,
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 110,
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  rotateX: 6,
+                  rotateY: -6,
+                }}
+                className="group relative p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-md hover:shadow-2xl transition-all overflow-hidden"
+              >
 
             {/* Badge */}
             <span

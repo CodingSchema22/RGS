@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SearchBar from "./SearchBar";
 import {
   FaLaptopCode,
   FaBook,
@@ -6,6 +7,7 @@ import {
   FaFutbol,
   FaRobot,
 } from "react-icons/fa";
+
 
 export default function Facilities() {
   const facilities = [
@@ -37,12 +39,17 @@ export default function Facilities() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <>
+    <section className="relative py-24 px-6 bg-gradient-to-br from-red-50 via-white to-red-100 overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute top-10 left-1/2 w-[900px] h-[900px] bg-red-300 opacity-20 blur-3xl rounded-full -translate-x-1/2"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
 
         {/* Heading */}
         <motion.div
-          className="text-center"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
@@ -56,37 +63,56 @@ export default function Facilities() {
         </motion.div>
 
         {/* Grid */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid md:grid-cols-3 gap-10 [perspective:1200px]">
+
           {facilities.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <motion.div
                 key={index}
-                className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.12,
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 110,
+                }}
+                whileHover={{
+                  scale: 1.05,
+                  rotateX: 6,
+                  rotateY: -6,
+                }}
+                className="group relative p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/40 shadow-md hover:shadow-2xl transition-all overflow-hidden"
               >
-                {/* Icon */}
-                <div className="text-red-600 text-3xl">
+
+                {/* ICON */}
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-red-500 text-white text-2xl shadow-md group-hover:scale-110 transition">
                   <Icon />
                 </div>
 
-                {/* Title */}
-                <h3 className="mt-4 text-xl font-semibold text-gray-900">
+                {/* TITLE */}
+                <h3 className="mt-6 text-xl font-semibold text-gray-900 group-hover:text-red-600 transition">
                   {item.title}
                 </h3>
 
-                {/* Description */}
-                <p className="mt-2 text-gray-600 text-sm leading-relaxed">
+                {/* DESCRIPTION */}
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">
                   {item.desc}
                 </p>
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 bg-gradient-to-br from-red-400/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+
               </motion.div>
             );
           })}
+
         </div>
       </div>
     </section>
+    </>
   );
 }
